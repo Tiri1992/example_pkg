@@ -1,21 +1,20 @@
-example\_pkg package
-====================
+Example\_pkg
+============
 
-Submodules
-----------
+		
 
-example\_pkg.calculator module
-------------------------------
+calculator module
+*****************
 
 .. automodule:: example_pkg.calculator
    :members:
    :undoc-members:
    :show-inheritance:
 
-example\_pkg.foo module
------------------------
+statistics module
+*****************
 
-.. automodule:: example_pkg.foo
+.. automodule:: example_pkg.statistics
    :members:
    :undoc-members:
    :show-inheritance:

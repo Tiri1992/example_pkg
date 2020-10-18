@@ -21,7 +21,8 @@ setuptools.setup(
         "dev": [
             "pytest>=3.7",
             "autopep8==1.5.4",
-            "mypy==0.790"
+            "mypy==0.790",
+            "Sphinx==3.2.1"
         ]
     },
     # Exclude the tests package

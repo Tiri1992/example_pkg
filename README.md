@@ -5,7 +5,7 @@ Good sample ref: https://github.com/areed1192/sigma-coding
 
 How to install and use package:
 
-First set up a virtual environment in root directory and add to .gitignore
+First set up a virtual environment
 
 ```sh
 $ python -m venv env

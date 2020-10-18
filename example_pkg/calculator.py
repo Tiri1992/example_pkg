@@ -23,7 +23,7 @@ def add(x: int, y: int) -> int:
 
 
 def subtract(x: int, y: int) -> int:
-    """Adds two integers.
+    """Subracts two integers from eachother.
 
     Args:
         x: The first integer.

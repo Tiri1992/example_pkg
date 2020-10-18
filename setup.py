@@ -17,12 +17,13 @@ setuptools.setup(
         "requests>=2.24.0"
     ],
     # Development dependencies: Not required to run package
-    extras_required={
+    extras_require={
         "dev": [
             "pytest>=3.7",
-            "autopep8==1.5.4"
+            "autopep8==1.5.4",
+            "mypy==0.790"
         ]
-    }
+    },
     # Exclude the tests package
     packages=setuptools.find_packages(exclude=['tests']),
     classifiers=[

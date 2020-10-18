@@ -27,7 +27,9 @@ $ pip install -e .
 $ pip list
 
 # example-pkg-tiri1992 0.0.1
+# Under location you should see the path of where the cloned repo is.
 ```
+**Note**: This wont make a copy into your global site-packages and is a recommended method to not have multiple copies of the same package which may cause conflict. The -e command installs a project in editable mode.
 
 ### Additional: Development
 

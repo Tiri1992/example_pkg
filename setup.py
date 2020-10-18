@@ -12,9 +12,22 @@ setuptools.setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/Tiri1992/example_pkg",
-    packages=setuptools.find_packages(),
+    # Add main dependencies
+    install_requires=[
+        "requests>=2.24.0"
+    ],
+    # Development dependencies: Not required to run package
+    extras_required={
+        "dev": [
+            "pytest>=3.7",
+            "autopep8==1.5.4"
+        ]
+    }
+    # Exclude the tests package
+    packages=setuptools.find_packages(exclude=['tests']),
     classifiers=[
         "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.8"
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent"
     ],

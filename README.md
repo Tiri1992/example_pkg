@@ -1,6 +1,7 @@
 # Getting Started
 
 Tutorial Example: https://packaging.python.org/tutorials/packaging-projects/
+Good sample ref: https://github.com/areed1192/sigma-coding
 
 How to install and use package:
 

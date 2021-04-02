@@ -1,1 +1,3 @@
-include LICENCE
+include LICENSE
+include example_pkg/data/*.csv
+exclude **/*.jpeg **/*.png

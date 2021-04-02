@@ -1,4 +1,6 @@
-# Series of arithmetic
+""" 
+Computes addition and subtraction.
+"""
 
 def add(x: int, y: int) -> int:
     """Adds two integers.

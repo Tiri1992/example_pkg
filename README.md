@@ -1,60 +1,48 @@
 # Getting Started
 
-Tutorial Example: https://packaging.python.org/tutorials/packaging-projects/
-Good sample ref: https://github.com/areed1192/sigma-coding
+We've selected the src/ package structure from the official [docs](https://packaging.python.org/tutorials/packaging-projects/) and moved most of the boilerplate setup configs to ``setup.cfg``. Also, we defined a pyproject.toml which tells python which build method to use.
 
-How to install and use package:
-
-First set up a virtual environment
+To install the package in editable mode (to run tests while developing):
 
 ```sh
-$ python -m venv env
-
-# Source the virtual env
-
-$ source env/bin/activate
-```
-
-Now to install the source files in the virtual environment
-
-```sh
-# In the root directory run
-
+# cd into root dir
 $ pip install -e .
-
-# Check to see if its installed in virtual env
-
-$ pip list
-
-# example-pkg-tiri1992 0.0.1
-# Under location you should see the path of where the cloned repo is.
-```
-**Note**: This wont make a copy into your global site-packages and is a recommended method to not have multiple copies of the same package which may cause conflict. The -e command installs a project in editable mode.
-
-### Additional: Development
-
-To install example_pkg, along with the tools you need to develop and run tests, run the following in your virtual environment:
-
-```sh
-$ pip install -e .[dev]
 ```
 
-
-### Creating a distribution package with sdist
-
-First look inside MANIFEST.in to include files that are not python files but want to be part of the distribution package.
+To build the package as either a wheel or source distribution (sdist), make sure you have upgraded your build method via pip (in a venv) by typing:
 
 ```sh
-# In root directory run
-
-$ python setup.py sdist
+$ python3 -m pip install --upgrade build
 ```
 
-This should create a dist/ directory in the root directory. Now to check everything was pacakaged correctly run:
+And then to build:
 
 ```sh
-# This should show a list of files that were distributed with your package
-# Check to see if LICENCE was include 
+# --sdist to build a source distribution
+# --wheel to build a wheel, Nothing specified builds both
+$ python -m build
+```
 
-$ tar --list -f dist/example-pkg-tiri1992-0.0.1.tar.gz
+The files will now be present in ``/dist`` directory, which we can now use to install our package in our virtual environment by doing:
+
+```sh
+# installing via wheel (fastest method)
+$ pip install dist/dist/example_pkg_tiri-0.1.0-py3-none-any.whl 
+```
+
+## How to develop with our code
+
+### Best solution
+
+Although according to pythons official docs are moving towards a stand alone setup.cfg, pyproject.toml project structure, they have still recommended keeping the setup.py script to install package in editable mode. This makes it easier to develop with (package discovery with /tests).
+
+```sh
+# cd into root folder
+$ pip install -e .
+```
+
+Now to run test suite we have our package referenced in our virtual environment, so any changes made in our source code will be reflected. It also means in our tests we can import directly from the module because its now in our python path (see ``test_calculator.py`` for an example).
+
+```sh
+pytest -v tests
 ```

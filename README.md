@@ -38,7 +38,8 @@ Although according to pythons official docs are moving towards a stand alone set
 
 ```sh
 # cd into root folder
-$ pip install -e .
+# aside from [all], there exists [test], [docs], [style]
+$ pip install -e .[all]
 ```
 
 Now to run test suite we have our package referenced in our virtual environment, so any changes made in our source code will be reflected. It also means in our tests we can import directly from the module because its now in our python path (see ``test_calculator.py`` for an example).

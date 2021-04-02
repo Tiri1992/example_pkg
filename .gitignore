@@ -3,10 +3,11 @@
 # Edit at https://www.toptal.com/developers/gitignore?templates=python
 
 # VSCODE
-.vscode
+**/.vscode
 
+# Cache
 # DS store
-docs/.DS_Store
+**/.DS_Store
 
 ### Python ###
 # Byte-compiled / optimized / DLL files

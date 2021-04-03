@@ -2,6 +2,49 @@
 
 We've selected the src/ package structure from the official [docs](https://packaging.python.org/tutorials/packaging-projects/) and moved most of the boilerplate setup configs to ``setup.cfg``. Also, we defined a pyproject.toml which tells python which build method to use.
 
+### Best solution using ``make``
+
+We've introduced a ``Makefile`` to automate alot of the build and getting setup stages.
+
+Setting up a **development environment** requires python version 3.7 or above. Then simply run:
+
+```sh
+$ make dev
+```
+
+To run test suites on the project:
+
+```sh
+$ make test
+```
+
+To package the project as a wheel and sdist:
+
+```sh
+$ make build-package
+```
+
+To remove cache files (*.pyc, __pycache__ etc):
+
+```sh
+$ make clean-cache
+```
+
+To remove builds, env as well as cache files:
+
+```sh
+$ make clean
+```
+
+For more information about what is available in the ``make`` expression type:
+
+```sh
+# All options will be revealed
+$ make
+```
+
+### Alternative (more manual solution)
+
 To install the package in editable mode (to run tests while developing):
 
 ```sh

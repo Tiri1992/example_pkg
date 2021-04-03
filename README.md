@@ -36,7 +36,7 @@ To remove builds, env as well as cache files:
 $ make clean
 ```
 
-For more information about what is available in the ``make`` expression type:
+For more information about what is available in the ``make`` commands type:
 
 ```sh
 # All options will be revealed

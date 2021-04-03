@@ -24,7 +24,7 @@ To package the project as a wheel and sdist:
 $ make build-package
 ```
 
-To remove cache files (*.pyc, __pycache__ etc):
+To remove cache files (``*.pyc``, ``__pycache__`` etc):
 
 ```sh
 $ make clean-cache

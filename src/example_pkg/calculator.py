@@ -2,6 +2,7 @@
 Computes addition and subtraction.
 """
 
+
 def add(x: int, y: int) -> int:
     """Adds two integers.
 
@@ -11,15 +12,6 @@ def add(x: int, y: int) -> int:
 
     Returns:
         The addition of x and y.
-
-    Raises:
-        None
-
-    Examples:
-        >>> x = 4
-        >>> y = 5
-        >>> add(x, y)
-        9
     """
     return x + y
 
@@ -33,14 +25,5 @@ def subtract(x: int, y: int) -> int:
 
     Returns:
         x subtract y.
-
-    Raises:
-        None
-
-    Examples:
-        >>> x = 12
-        >>> y = 7
-        >>> subtract(x, y)
-        5
     """
     return x - y

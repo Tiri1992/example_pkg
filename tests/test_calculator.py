@@ -5,12 +5,8 @@ from example_pkg.calculator import subtract
 
 
 def test_add():
-    x = 2
-    y = 3
-    assert add(x, y) == 5
+    assert add(3, 2) == 5
 
 
 def test_subtract():
-    x = 8
-    y = 7
-    assert subtract(x, y) == 1
+    assert subtract(5, 4) == 1

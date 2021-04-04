@@ -1,4 +1,4 @@
-.PHONY: help build dev test venv clean-cache clean-env clean-build clean-all
+.PHONY: help build dev test test-all venv clean-cache clean-env clean-build clean-all
 
 VENV_NAME?=env
 VENV_ACTIVATE?=${VENV_NAME}/bin/activate
@@ -10,6 +10,7 @@ help:
 	@echo "make clean-env :: removes virtual environment."
 	@echo "make clean-build :: removes build packages."
 	@echo "make test :: runs all test suites."
+	@echo "make test-all :: runs tox."
 	@echo "make dev :: prepares a development environment with required packages."
 	@echo "make build-package :: packages the project by building both wheel and sdist in dist/."
 
@@ -24,6 +25,9 @@ dev: $(VENV_ACTIVATE)
 test: $(VENV_ACTIVATE)
 	$(PYTHON) -m pytest -v
 
+test-all: $(VENV_ACTIVATE)
+	tox
+
 clean-cache:
 	rm -rf '.vscode'
 	rm -rf **/*.eggs **/*.egg-info .cache .pytest_cache 
@@ -35,6 +39,8 @@ clean-env:
 clean-build:
 	rm -rf './dist'
 	rm -rf './build'
+	rm -rf '.tox'
+	rm -rf './htmlcov'
 
 clean: clean-env clean-cache clean-build
 

@@ -9,7 +9,9 @@ parallel = true
 source =
     example_pkg
     tests
-omit = tests/*
+omit = 
+    tests/* 
+    */__init__.py
 
 [report]
 show_missing = true

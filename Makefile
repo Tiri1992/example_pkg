@@ -31,6 +31,7 @@ test-all: $(VENV_ACTIVATE)
 clean-cache:
 	rm -rf '.vscode'
 	rm -rf **/*.eggs **/*.egg-info .cache .pytest_cache 
+	rm -rf .coverage.*
 	find . -type f -name '*.py[co]' -delete -o -type d -name __pycache__ -delete
 
 clean-env:

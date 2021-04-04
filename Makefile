@@ -32,6 +32,7 @@ clean-cache:
 	rm -rf '.vscode'
 	rm -rf **/*.eggs **/*.egg-info .cache .pytest_cache 
 	rm -rf .coverage.*
+	rm .python-version
 	find . -type f -name '*.py[co]' -delete -o -type d -name __pycache__ -delete
 
 clean-env:
@@ -42,6 +43,7 @@ clean-build:
 	rm -rf './build'
 	rm -rf '.tox'
 	rm -rf './htmlcov'
+	rm *.xml
 
 clean: clean-env clean-cache clean-build
 
